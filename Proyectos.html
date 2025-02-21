@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Proyectos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Ejemplo Macdalys</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .modal img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .modal p {
+            margin-top: 10px;
+            font-size: 16px;
+            text-align: left;
+        }
+        .close-btn {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <br><br><br><br><br><br>
+    </header>
+
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="Logo-removebg-preview.png">
+        </div>
+        <div class="menu">
+            <a href="index.html"><button>Inicio</button></a>
+            <a href="Galeria.html"><button>Acerca de</button></a>
+            <a href="Proyectos.html"><button>Productos</button></a>
+            <a href="Contacto.html"><button>Videos</button></a>
+        </div>
+    </nav>
+
+    <section>
+        <article class="contenedor-galeria">
+            <div class="galeria">
+                <img class="Galeria" src="WhatsApp_Image_2025-02-20_at_10.50.36_PM-removebg-preview.png" data-titulo="Kit de Química" data-descripcion="Kit centrado en el estudio de la química. Contiene reactivos y herramientas básicas para experimentos. Ideal para estudiantes y entusiastas de la ciencia. Diseñado para fomentar el aprendizaje interactivo y seguro.">
+                <img class="Galeria" src="Caja-removebg-preview.png" data-titulo="Kit de Ciencias Naturales" data-descripcion="Kit diseñado para explorar los principios fundamentales de la biología, la química, la física y la ecología. Contiene instrumentos como lupas, microscopios, imanes, tubos de ensayo y muestras naturales. Ideal para estudiantes y entusiastas de la ciencia, promueve el aprendizaje interactivo y seguro mediante la experimentación y la observación del entorno.">
+            </div>
+        </article>
+    </section>
+
+    <div class="modal" id="modal">
+        <img id="modal-img" src="" alt="Imagen seleccionada">
+        <h3 id="modal-title"></h3>
+        <p id="modal-text"></p>
+        <button class="close-btn" onclick="cerrarModal()">Cerrar</button>
+    </div>
+
+    <script>
+        const imagenes = document.querySelectorAll(".Galeria");
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const modalTitle = document.getElementById("modal-title");
+        const modalText = document.getElementById("modal-text");
+
+        imagenes.forEach(img => {
+            img.addEventListener("click", function() {
+                modalImg.src = this.src;
+                modalTitle.innerText = this.getAttribute("data-titulo");
+                modalText.innerText = this.getAttribute("data-descripcion");
+                modal.style.display = "block";
+            });
+        });
+
+        function cerrarModal() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <footer>
+        <p>Copyright © 2024 - 2024 LabBox®. All rights reserved.</p>
+    </footer>
+</body>
+</html>

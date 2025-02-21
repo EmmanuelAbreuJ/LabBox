@@ -1,0 +1,91 @@
+nav {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+nav .logo-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+nav .logo {
+    height: 100px; 
+    max-width: 90px; 
+    object-fit: contain; }
+
+nav button {
+    background-color: #4c844b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+    color: rgb(16, 218, 16);
+    transform: scale(1  .05);
+}
+
+nav button:active {
+    color: rgb(16, 218, 16);
+    transform: scale(0.95);
+}
+
+footer {
+    background-color: white;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    justify-content: center;
+}
+
+p {
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+}
+
+.contenedor-galeria {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+body {
+    background-color: #84b482;
+}
+
+.Galeria {
+    height: 300px; 
+    width: 300px;
+    margin: 10px; 
+}
